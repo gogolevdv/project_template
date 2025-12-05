@@ -3,6 +3,7 @@ package ru.gogol;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Predicate;
 
 public class Apple {
     private String color;
@@ -67,6 +68,16 @@ public class Apple {
         List<Apple> result = new ArrayList<>();
         for (Apple apple : inventory) {
             if (apple.getWeight() >= minWeight && apple.getWeight() <= maxWeight) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public static List<Apple> filterApple(List<Apple> inventory, Predicate<Apple> p) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (p.test(apple)) {
                 result.add(apple);
             }
         }
