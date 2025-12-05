@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="MyTest" target="17" />
+      <module name="MyTest.main" target="17" />
+      <module name="MyTest.test" target="17" />
+      <module name="ru.gogol.MyTest.main" target="17" />
+      <module name="ru.gogol.MyTest.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
