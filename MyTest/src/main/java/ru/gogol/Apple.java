@@ -10,7 +10,9 @@ public class Apple {
     private int weight; // в граммах
     private static final List<Apple> inventory = new ArrayList<>();
 
-    private static final String[] COLORS = {"Red", "Green", "Yellow", "Pink", "Orange"};
+//    private static final String[] COLORS = {"Red", "Green", "Yellow", "Pink", "Orange"};
+    enum COLORS {Red, Green, Yellow, Pink, Orange}
+    COLORS[] colors=COLORS.values();
     private static final Random random = new Random();
 
     public Apple() {
@@ -33,7 +35,8 @@ public class Apple {
 
     // Метод для наполнения экземпляра случайными данными
     public void fillWithRandomData() {
-        this.color = COLORS[random.nextInt(COLORS.length)];
+        this.color = String.valueOf(colors[random.nextInt(colors.length)]);
+//        this.color = COLORS.Red.toString();
         this.weight = 50 + random.nextInt(251); // вес от 50 до 300 грамм
     }
 
@@ -84,6 +87,23 @@ public class Apple {
         return result;
     }
 
+    public static List<Apple> filterApple1(List<Apple> inventory, ApplePredicate p) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (p.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public static void prettyPrintApple(List<Apple> inventory, AppleFormatter p){
+
+        for (Apple apple : inventory) {
+            String output = p.accept(apple);
+            System.out.println(output);
+    }
+    }
     // Метод для отбора яблок по цвету и весу
     public static List<Apple> filterByColorAndWeight(String targetColor, int minWeight, int maxWeight) {
         List<Apple> result = new ArrayList<>();
@@ -105,6 +125,9 @@ public class Apple {
     public static void clearInventory() {
         inventory.clear();
     }
+
+
+
 
     @Override
     public String toString() {

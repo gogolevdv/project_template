@@ -11,6 +11,7 @@ public class Main {
 
         List<Apple> greenApple = Apple.filterApple(Apple.getInventory(),a->"Green".equals(a.getColor()));
 
+
         System.out.println("=== All apples in inventory ===");
 
         Apple.displayApples(Apple.getInventory());
@@ -23,6 +24,14 @@ public class Main {
         Apple.displayApples(Apple.filterApple(Apple.getInventory(),a->"Pink".equals(a.getColor())));
         System.out.println("=== Red apples in inventory ===");
         Apple.displayApples(Apple.filterApple(Apple.getInventory(),a->"Red".equals(a.getColor())));
+
+        Apple.displayApples(Apple.filterApple(Apple.getInventory(),a->a.getWeight()>150));
+
+        System.out.println("=== Red and Heavy apples in inventory ===");
+
+        Apple.displayApples(Apple.filterApple1(Apple.getInventory(), new RedAndHeavyApples()));
+
+        Apple.prettyPrintApple(Apple.getInventory(), new AppleSimpleFormatter());
 
     }
 }

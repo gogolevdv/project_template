@@ -6,8 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MyTest.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyTest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MyTest.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/project_template.iml" filepath="$PROJECT_DIR$/.idea/project_template.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ru.gogol.MyTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ru.gogol.MyTest.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ru.gogol.MyTest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ru.gogol.MyTest.test.iml" />
     </modules>
   </component>
 </project>
